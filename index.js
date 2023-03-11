@@ -10,40 +10,37 @@ class heroi{
   cor_da_pele;
   estilo_cabelo;
 
-  constructor(){
-    
+  constructor(nome, forca, idade, poder, sexo, equipamento, cor_da_pele, estilo_cabelo){
+    this.nome = nome;
+    this.forca = forca;
+    this.idade = idade;
+    this.poder = poder;
+    this.sexo = sexo;
+    this.equipamento = equipamento;
+    this.cor_da_pele = cor_da_pele;
+    this.estilo_cabelo = estilo_cabelo;
   }
 
   //função - método
   soltarPoder = function(tipo_do_poder){
     console.log("Poder é: " + tipo_do_poder);
   }
-}
+  apresentarHeroi = function(){
+    //Apresentação
+    console.log(this.nome);
+console.log(this.forca);
+console.log(this.idade);
+console.log(this.poder);
+console.log(this.sexo);
+console.log(this.equipamento);
+console.log(this.cor_da_pele);
+console.log(this.estilo_cabelo);
+  }
+};
 
-gaviao_negro = new heroi();
-gaviao_negro['nome'] = "Gavião Negro";
-gaviao_negro['forca'] = 100;
-gaviao_negro['idade'] = 35;
-gaviao_negro['poder'] = "Atacar com a Clave",
-gaviao_negro['sexo'] = 'm';
-gaviao_negro['equipamento'] = "Clave";
-gaviao_negro['cor_da_pele'] = "morena";
-gaviao_negro['estilo_cabelo'] = "normal";
+gaviao_negro = new heroi("Gavião Negro", 100, 35, "Ataque com a clave", "M", "Clave", "Moreno", "Normal");
+gaviao_negro.apresentarHeroi();
 
-atomo = new heroi();
-atomo['nome'] = "Atomo";
-atomo['forca'] = 70;
-atomo['idade'] = 30;
-atomo['poder'] = "Diminui e aumenta de tamanho",
-atomo['sexo'] = 'm';
-atomo['equipamento'] = "";
-atomo['cor_da_pele'] = "branca";
-atomo['estilo_cabelo'] = "normal";
-console.log(gaviao_negro.nome);
-console.log(gaviao_negro.forca);
-console.log(gaviao_negro.idade);
-console.log(gaviao_negro.poder);
-console.log(gaviao_negro.sexo);
-console.log(gaviao_negro.equipamento);
-console.log(gaviao_negro.cor_da_pele);
-console.log(gaviao_negro.estilo_cabelo);
+adao_negro = new heroi("Adão Negro", 200, 1500, "Ataque com Raio", "M", "Raio", "Moreno", "Careca");
+adao_negro.apresentarHeroi();
+
